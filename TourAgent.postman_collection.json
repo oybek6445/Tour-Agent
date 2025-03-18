@@ -1,0 +1,99 @@
+{
+    "info": {
+        "name": "Tour Agent API",
+        "description": "Postman collection for Tour Agent API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Tours",
+            "item": [
+                {
+                    "name": "Create Tour",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Maldiv orollari sayohati\", \"description\": \"5 yulduzli mehmonxona, toza plyajlar va suv sportlari\", \"price\": 1200, \"location\": \"Maldiv\", \"guides\": []}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/tours",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["tours"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Tour by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/tours/:id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["tours", ":id"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Tour Guides",
+            "item": [
+                {
+                    "name": "Create Tour Guide",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Otabek Xolmatov\", \"experience\": 5, \"phone\": \"+998901234567\", \"tours\": []}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/guides",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["guides"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Bookings",
+            "item": [
+                {
+                    "name": "Create Booking",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_name\": \"Javohir Tursunov\", \"tour_id\": \"<TOUR_ID>\", \"date\": \"2025-04-01\"}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bookings"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Booking by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/:id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bookings", ":id"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
