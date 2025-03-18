@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB = require('./db'); 
+const connectDB = require('./config/db.js'); 
 const tourRoutes = require('./routes/tourRoutes');
 const guideRoutes = require('./routes/guideRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
